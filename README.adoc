@@ -1,0 +1,9 @@
+= Ewescripts
+
+Collection of scripts for wordlist mangling
+
+== `mutator.py`
+
+Supply a word using the `-w` option, `mutator.py` will print out the Cartesian Product of the characters in that word. 
+
+Modify the master dictionary in the `mutator.py` file to handle different characters.
