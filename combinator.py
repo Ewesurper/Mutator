@@ -10,13 +10,9 @@ parser.add_argument('-l', action='store', dest='userlist', help='Define the word
 
 args = parser.parse_args()
 
-list1 = []
-list2 = []
+# create matching lists from the contents of the wordlist file
+list1 = list2 = open(args.userlist).readlines()
 
-f = open(args.userlist, 'r')
-for word in f:
-	list1.append(word)
-	list2.append(word)
 for line1 in list1:
 	for line2 in list2:
 		print(line1.strip()+line2.strip())
