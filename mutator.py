@@ -2,15 +2,61 @@
 
 #Import Libraries
 import argparse
+import itertools
 
 #Define Argparse,
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-w', action='store', dest='user_word', help='Define the word you wish to mutate')
-parser.add_argument('-o', action='store', dest='user_output', help='Directs output to a file of your choice')
+parser.add_argument('-w', action='store', dest='user_word', help='word to mutate')
+parser.add_argument('-o', action='store', dest='user_output', help='output to a file')
 
 args = parser.parse_args()
 
+#Define Master Dictonary
+md = {
+        'a':['a','A','@','4'],
+        'b':['b','B','8'],
+        'c':['c','C','<'],
+        'd':['d','D'],
+        'e':['e','E','3'],
+        'f':['f','F','ph'],
+        'g':['g','G','6','9'],
+        'h':['h','H'],
+        'i':['i','I','1','|','!'],
+        'j':['j','J'],
+        'k':['k','K'],
+        'l':['l','L','|'],
+        'm':['m','M'],
+        'n':['n','N'],
+        'o':['o','O','0','()','[]','{}','<>'],
+        'p':['p','P'],
+        'q':['q','Q'],
+        'r':['r','R'],
+        's':['s','S','z','Z','$','5'],
+        't':['t','T','7'],
+        'u':['u','U'],
+        'v':['v','V'],
+        'w':['w','W'],
+        'x':['x','X'],
+        'y':['y','Y'],
+        'z':['z','Z','2']
+}
+
+
+
+#Define character list
+characterlist = list(args.user_word.lower())
+characterlength = len(args.user_word)
+
+# build the list of lists
+list_o_possibilities = []
+for letter in characterlist:
+    list_o_possibilities.append(md[letter])    
+
+for element in itertools.product(*list_o_possibilities):
+        print(''.join(element))
+
+'''
 #Define Master Dictonary
 md = {
         'a':{'a','A','@','4'},
@@ -40,12 +86,6 @@ md = {
         'y':{'y','Y'},
         'z':{'z','Z','2'}
 }
-
-
-
-#Define character list
-characterlist = list(args.user_word.lower())
-characterlength = len(args.user_word)
 
 if characterlength == 1:
 	a = characterlist[0]
@@ -287,4 +327,4 @@ elif characterlength == 14:
 															print(value0+value1+value2+value3+value4+value5+value6+value7+value8+value9+value10+value11+value12+value13)
 else:
 	print("I'm sorry, the amount of characters supplied isn't supported yet")
-
+'''
