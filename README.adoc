@@ -1,0 +1,14 @@
+= Ewescripts
+
+Collection of scripts for wordlist mangling
+
+== `combinator.py`
+
+Takes a wordlist as input `-l` option, and performs a combination of all elements in that wordlist.
+
+== `mutator.py`
+
+Supply a word using the `-w` option, `mutator.py` will print out the Cartesian Product of the characters in that word. 
+
+Modify the master dictionary in the `mutator.py` file to handle different characters.
+
