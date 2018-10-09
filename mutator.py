@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 #Import Libraries
 import argparse
 import itertools
