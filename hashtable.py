@@ -1,5 +1,3 @@
-#!/usr/bin/env/python
-
 #Import Libraries
 import argparse
 import os
