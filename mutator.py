@@ -11,6 +11,7 @@ parser.add_argument('-o', action='store', dest='user_output', help='output to a 
 args = parser.parse_args()
 
 #Define Master Dictonary
+#Words will be mutated based off this dictonary
 md = {
         'a':['a','A','@','4'],
         'b':['b','B','8'],
@@ -26,7 +27,7 @@ md = {
         'l':['l','L','|'],
         'm':['m','M'],
         'n':['n','N'],
-        'o':['o','O','0','()','[]','{}','<>'],
+        'o':['o','O','0'],
         'p':['p','P'],
         'q':['q','Q'],
         'r':['r','R'],
@@ -37,7 +38,7 @@ md = {
         'w':['w','W'],
         'x':['x','X'],
         'y':['y','Y'],
-        'z':['z','Z','2'],
+        'z':['z','Z','s','S','2'],
         '0':['0'],
         '1':['1'],
         '2':['2'],
@@ -48,13 +49,46 @@ md = {
         '7':['7'],
         '8':['8'],
         '9':['9'],
-        '0':['0']
+        '0':['0'],
+        '!':['!'],
+        '@':['@'],
+        '#':['#'],
+        '$':['$'],
+        '%':['%'],
+        '^':['^'],
+        '&':['&'],
+        '*':['*'],
+        '(':['('],
+        ')':[')'],
+        '-':['-'],
+        '_':['_'],
+        '+':['+'],
+        '=':['='],
+        '{':['{'],
+        '}':['}'],
+        '[':['['],
+        ']':[']'],
+        '|':['|'],
+        '\\':['\\'],
+        '`':['`'],
+        '~':['~'],
+        ':':[':'],
+        ';':[';'],
+        '"':['"'],
+        '\'':['\''],
+        '<':['<'],
+        '>':['>'],
+        '?':['?'],
+        ',':[','],
+        '.':['.'],
+        '/':['/'],
+        ' ':[' ']
 }
 
-# create character list from user supplied word
+#Create character list from user supplied word
 characterlist = list(args.user_word.lower())
 
-# assemble the list of lists
+#Assemble the list of lists
 list_o_possibilities = []
 for character in characterlist:
     list_o_possibilities.append(md[character])
