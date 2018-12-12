@@ -94,4 +94,4 @@ for character in characterlist:
     list_o_possibilities.append(md[character])
 
 for element in itertools.product(*list_o_possibilities):
-        print(''.join(element))
+    print(''.join(element))
