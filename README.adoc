@@ -1,10 +1,6 @@
 = Ewescripts
 
-Collection of scripts for wordlist mangling
-
-== `combinator.py`
-
-Takes a wordlist as input `-l` option, and performs a combination of all elements in that wordlist.
+Collection of scripts used for password generation and credential management
 
 == `mutator.py`
 
