@@ -6,6 +6,7 @@ import itertools
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-w', action='store', dest='user_word', help='word to mutate')
+parser.add_argument('-l', action='store', dest='user_list', help='wordlist to mutate')
 parser.add_argument('-o', action='store', dest='user_output', help='output to a file')
 
 args = parser.parse_args()
