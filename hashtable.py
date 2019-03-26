@@ -8,7 +8,10 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('-hf', action='store', dest='hashfile', help='Define the location of the hash dump')
 parser.add_argument('-pf', action='store', dest='potfile', help='Define the location of the potfile')
-parser.add_argument('-d', action='store', dest='domain', default="*None*", help='List domain of recovered credentials')
+parser.add_argument('-d', action='store', dest='domain', default="", help='List domain of recovered credentials')
+#parser.add_argument('-g', action='store', dest='potfile', help='Output data in grepable format')
+#parser.add_argument('-t', action='store', dest='potfile', help='Output data in table format')
+#parser.add_argument('-a', action='store', dest='potfile', help='Output data in both table and grepable formats')
 
 
 args = parser.parse_args()
