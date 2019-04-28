@@ -11,3 +11,18 @@ Modify the master dictionary in the `mutator.py` file to handle different charac
 == Example
 python mutator.py -w password
 
+password
+passworD
+passwoRd
+passwoRD
+passwOrd
+passwOrD
+passwORd
+passwORD
+passw0rd
+passw0rD
+passw0Rd
+passw0RD
+passWord
+
+
