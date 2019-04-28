@@ -1,14 +1,14 @@
-= Mutator
+# Mutator
 
 A script that will create combinations of a supplied word.
 
-== mutator.py
+## mutator.py
 
 Supply a word using the `-w` option, `mutator.py` will print out the Cartesian Product of the characters in that word. 
 
 Modify the master dictionary in the `mutator.py` file to handle different characters.
 
-== Example
+```bash
 python mutator.py -w password
-
+```
 
