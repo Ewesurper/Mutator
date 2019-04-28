@@ -1,6 +1,6 @@
 = Mutator
 
-A script that will create combinations of a supplied word based. The combinations are based off the dictionary defined in mutator.py.
+A script that will create combinations of a supplied word.
 
 == mutator.py
 
