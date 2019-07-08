@@ -102,6 +102,7 @@ d1 = {
 
 #Dictionary with rare and complex replacements
 #Pulled off the wiki page. Deleted some that didnt make any sense
+#https://simple.wikipedia.org/wiki/Leet
 #Some still seem very obscure to me. Maybe I am just not cool enough to understand them. I included them anyway
 d2 = {
 	'a':['a','A','4','@','/-\\','/_\\','/\\','Д'],
