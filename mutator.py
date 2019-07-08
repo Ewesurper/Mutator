@@ -18,8 +18,8 @@ import itertools
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-w', action='store', dest='user_word', help='Word to mutate')
-parser.add_argument('-l', action='store', dest='user_list', help='Wordlist to mutate')
-parser.add_argument('-o', action='store', dest='file_output', help='File to output results')
+#parser.add_argument('-l', action='store', dest='user_list', help='Wordlist to mutate')
+#parser.add_argument('-o', action='store', dest='file_output', help='File to output results')
 parser.add_argument('-d2', action='store_true', dest='d2', help='Chose to use the second, more complete, dictionary')
 
 args = parser.parse_args()
