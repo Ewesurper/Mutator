@@ -179,15 +179,16 @@ d2 = {
 #Create character list from user supplied word
 characterlist = list(args.user_word.lower())
 
+#Create list of possibilities
+list_o_possibilities = []
+
 #Assemble the list of lists
-if args.d2 is not True: 
-	list_o_possibilities = []
-	for character in characterlist:
-		list_o_possibilities.append(d1[character])
-else:
-	list_o_possibilities = []
+if args.d2 == True:
 	for character in characterlist:
 		list_o_possibilities.append(d2[character])
+else:
+	for character in characterlist:
+		list_o_possibilities.append(d1[character])
 
 #Print mutations
 for element in itertools.product(*list_o_possibilities):
