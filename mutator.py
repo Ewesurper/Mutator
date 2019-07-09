@@ -12,7 +12,6 @@
 #python muation.py -d2 -w password >> password_mutations_full.txt
 #TODO: Add file output functionality
 
-
 #Import Libraries
 import argparse
 import itertools
@@ -181,8 +180,6 @@ d2 = {
 	' ':[' ']
 }
 
-
-
 #delcare lists for various storage
 wordlist = []
 output = []
@@ -194,7 +191,6 @@ if args.user_list:
 if args.user_word:
     #append user_word to wordlist
     wordlist.append(args.user_word)
-
 
 #iterate through each word in wordlist
 for word in wordlist:
