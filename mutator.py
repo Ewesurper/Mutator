@@ -12,6 +12,7 @@
 #python muation.py -d2 -w password >> password_mutations_full.txt
 #TODO: Add file output functionality
 #TODO: Add count functionality -c
+#TODO: People to use their own dictionaries
 
 #Import Libraries
 import argparse
