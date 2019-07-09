@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 #Name: Mutator.py
 #Purpose:Create mutations of supplied word(s)
 #Last updated: 8 July 2019
-#Version: 2.0
+#Version: 2.1
 #Created by: Ewesurper
 
 ##Example Commands:
@@ -9,6 +10,7 @@
 #python mutator.py -w password >> password_mutations.txt
 #python mutator.py -d2 -w password
 #python muation.py -d2 -w password >> password_mutations_full.txt
+#TODO: Add file output functionality
 
 #Import Libraries
 import argparse
@@ -18,7 +20,7 @@ import itertools
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-w', action='store', dest='user_word', help='Word to mutate')
-#parser.add_argument('-l', action='store', dest='user_list', help='Wordlist to mutate')
+parser.add_argument('-f', action='store', dest='user_list', help='Wordlist to mutate')
 #parser.add_argument('-o', action='store', dest='file_output', help='File to output results')
 parser.add_argument('-d2', action='store_true', dest='d2', help='Chose to use the second, more complete, dictionary')
 
@@ -178,20 +180,39 @@ d2 = {
 	' ':[' ']
 }
 
-#Create character list from user supplied word
-characterlist = list(args.user_word.lower())
+#delcare lists for various storage
+wordlist = []
+output = []
 
-#Create list of possibilities
-list_o_possibilities = []
+#populate wordlist with each word that will be mutated based on 
+if args.user_list:
+    #read in each line of user_list as element in wordlist
+    wordlist = [line.rstrip('\n') for line in open(args.user_list)]
+if args.user_word:
+    #append user_word to wordlist
+    wordlist.append(args.user_word)
 
-#Assemble the list of lists
-if args.d2 == True:
-	for character in characterlist:
-		list_o_possibilities.append(d2[character])
-else:
-	for character in characterlist:
-		list_o_possibilities.append(d1[character])
-
-#Print mutations
-for element in itertools.product(*list_o_possibilities):
-	print(''.join(element))
+#iterate through each word in wordlist
+for word in wordlist:
+    #Clear out old characterlist and list_o_possibilities
+    list_o_possibilities = None
+    characterlist = None
+    #Create list to contain 
+    list_o_possibilities = []
+    #Explode word into list of characters
+    characterlist = list(word.lower())
+    #Assemble the list of lists
+    if args.d2 == True:
+        for character in characterlist:
+            list_o_possibilities.append(d2[character])
+    else:
+        for character in characterlist:
+            list_o_possibilities.append(d1[character])
+    #store mutations in output
+    for element in itertools.product(*list_o_possibilities):
+        #print(''.join(element))
+        output.append(''.join(element))
+#Print the final output
+#print(output)
+for elem in output:
+    print elem
