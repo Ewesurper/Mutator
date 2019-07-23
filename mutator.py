@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #Name: Mutator.py
 #Purpose:Create mutations of supplied word(s)
-#Last updated: 8 July 2019
+#Last updated: 23 July 2019
 #Version: 2.1
 #Created by: Ewesurper
 
@@ -215,6 +215,5 @@ for word in wordlist:
         #print(''.join(element))
         output.append(''.join(element))
 #Print the final output
-#print(output)
 for elem in output:
-    print elem
+    print(elem)
