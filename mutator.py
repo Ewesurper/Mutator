@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 #Name: Mutator.py
 #Purpose:Create mutations of supplied word(s)
-#Last updated: 23 July 2019
-#Version: 2.1
+#Last updated: 7 August 2019
+#Version: 2.2
 #Created by: Ewesurper
 
 ##Example Commands:
 #python mutator.py -w password
-#python mutator.py -w password >> password_mutations.txt
-#python mutator.py -d2 -w password
-#python muation.py -d2 -w password >> password_mutations_full.txt
-#TODO: Add count functionality -c
+#python mutator.py -w password -o password_mutations.txt
+#python mutator.py -l words.lst 
+
+#Todo-List
+#Add count functionality -c
 
 #Import Libraries
 import argparse
@@ -21,7 +22,7 @@ from collections import defaultdict
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-w', action='store', dest='user_word', help='Word to mutate')
-parser.add_argument('-f', action='store', dest='user_list', help='Wordlist to mutate')
+parser.add_argument('-l', action='store', dest='user_list', help='Wordlist to mutate')
 parser.add_argument('-o', action='store', dest='user_output', default=' ',help='File to output results')
 parser.add_argument('-d', action='store', dest='dict', help='Chose a dictionary to use')
 
