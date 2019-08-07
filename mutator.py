@@ -6,9 +6,9 @@
 #Created by: Ewesurper
 
 ##Example Commands:
-#python mutator.py -w password
-#python mutator.py -w password -o password_mutations.txt
-#python mutator.py -l words.lst 
+#python mutator.py -d dicts/common.txt -w password
+#python mutator.py -d dicts/common.txt -w password -o password_mutations.txt
+#python mutator.py -d dicts/common.txt -l words.lst 
 
 #Todo-List
 #Add count functionality -c
