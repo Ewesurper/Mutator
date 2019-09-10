@@ -2,7 +2,7 @@
 #Name: Mutator.py
 #Purpose:Create mutations of supplied word(s)
 #Last updated: 7 August 2019
-#Version: 2.2
+#Version: 2.0
 #Created by: Ewesurper
 
 ##Example Commands:
