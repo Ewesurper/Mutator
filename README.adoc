@@ -4,8 +4,13 @@ A script that will create combinations of a supplied word.
 
 ## mutator.py
 
-Supply a word using the `-w` option, `mutator.py` will print out the combinations of that word. Modify the master dictionary in the `mutator.py` file to handle different characters.
+1. Supply a word using the `-w` option, `mutator.py` will print out the combinations of that word.
+2. Supply a list of words for mutator.py to mutate using the `-l` option.
+3. 'mutator.py' can accept the `-w` and `-l` option at the same time.
+4. Supply a dictionary for `mutator.py` to use by defining the `-d` option.
+5. Supply a file for `mutator.py` to output to by defining the `-o` option.
 
+Example Commands
 ```bash
 python mutator.py -d dicts/common.txt -w password
 python mutator.py -d dicts/common.txt -w password -o password_mutations.txt
